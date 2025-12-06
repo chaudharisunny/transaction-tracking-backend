@@ -4,11 +4,10 @@ import express from 'express'
 const app = express()
 const port = 3000
 import routeIndex from './routes.js'
-import connectDB from './config.js';
+import connectDB from './config.js'
 import cors from 'cors'
 
-
-connectDB() 
+connectDB()
 app.use(express.urlencoded({ extended: false })); // No need for body-parser
 app.use(express.json())
 app.use(cors())
